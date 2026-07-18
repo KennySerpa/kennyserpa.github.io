@@ -1,0 +1,17 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "selector-class-pattern": null,
+    "custom-property-pattern": null,
+    "no-descending-specificity": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "value-keyword-case": [
+      "lower",
+      { "ignoreKeywords": ["SF Pro Text", "Helvetica Neue", "BlinkMacSystemFont", "Arial"] }
+    ],
+    "color-function-notation": "legacy",
+    "alpha-value-notation": "number",
+    "property-no-vendor-prefix": [true, { "ignoreProperties": ["backdrop-filter"] }],
+    "media-feature-range-notation": "prefix"
+  }
+}
