@@ -906,6 +906,7 @@ footer {
   .two-col {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    break-inside: avoid;
   }
 
   .skill-block {
