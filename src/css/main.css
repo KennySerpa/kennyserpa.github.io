@@ -784,41 +784,49 @@ footer {
     justify-content: space-between;
     gap: 24px;
     border-bottom: 1px solid #999;
-    padding-bottom: 16px;
-    margin-bottom: 18px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    break-inside: avoid;
   }
 
   .resume-header h1 {
     color: #000;
-    font-size: 22pt;
-    margin-bottom: 4px;
+    font-size: 20pt;
+    margin-bottom: 2px;
   }
 
   .header-tagline {
     color: #1565c0;
-    font-size: 11pt;
+    font-size: 10.5pt;
+    margin-bottom: 4px;
   }
 
   .header-summary {
     color: #333;
     max-width: none;
     margin-bottom: 0;
+    font-size: 9.5pt;
   }
 
   .header-right {
-    padding-top: 6px;
+    padding-top: 4px;
     text-align: right;
   }
 
   .recruiter-glance {
     color: #333;
-    gap: 3px;
-    font-size: 9.5pt;
+    gap: 2px;
+    font-size: 9pt;
   }
 
   .recruiter-role {
     color: #000;
-    font-size: 11pt;
+    font-size: 10.5pt;
+  }
+
+  .recruiter-tenure,
+  .recruiter-tenure span {
+    color: #000 !important;
   }
 
   .recruiter-strength {
@@ -829,41 +837,62 @@ footer {
 
   .content-section,
   .two-col {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .content-section h2 {
     color: #555;
     border-bottom-color: #bbb;
     font-size: 9pt;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
   }
 
   .highlights-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: 6px;
   }
 
   .highlight-card {
     background: #fff;
     border: 1px solid #ddd;
     break-inside: avoid;
+    padding: 8px;
   }
 
-  .hc-num,
-  .hc-label {
+  .hc-num {
     color: #000;
+    font-size: 8.5pt;
+  }
+
+  .hc-label {
+    color: #222;
+    font-size: 8pt;
   }
 
   .job {
     break-inside: avoid;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
-  .job-left h3,
+  .job-left h3 {
+    font-size: 10.5pt;
+  }
+
   .job-company,
   .job-date,
+  .job-note {
+    font-size: 9pt;
+  }
+
+  .job ul {
+    margin-top: 4px;
+  }
+
   .job ul li {
-    color: #000;
+    color: #222;
+    font-size: 8.5pt;
+    margin-bottom: 2px;
   }
 
   .job ul li::before {
@@ -872,29 +901,38 @@ footer {
 
   .two-col {
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 20px;
+  }
+
+  .skill-block {
+    margin-bottom: 6px;
   }
 
   .skill-cat {
     color: #555;
+    font-size: 8pt;
   }
 
   .skill-vals {
     color: #000;
+    font-size: 8.5pt;
   }
 
   .cert-item {
     border-bottom-color: #ddd;
+    padding-bottom: 4px;
   }
 
   .cert-name,
   .cert-date {
     color: #000;
+    font-size: 8.5pt;
   }
 
   .edu-item {
     background: #fff;
     border-color: #ddd;
+    padding: 10px;
   }
 
   .edu-header h3,
