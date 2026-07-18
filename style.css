@@ -64,9 +64,6 @@ nav {
   border: 1px solid var(--border);
   display: block;
 }
-.nav-photo[src="photo.jpg"]:not([complete]) {
-  display: none;
-}
 .nav-name {
   font-size: 0.92rem;
   font-weight: 600;
