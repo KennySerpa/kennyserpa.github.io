@@ -63,7 +63,11 @@ The site deploys automatically to GitHub Pages when changes are pushed to `main`
 Required repository settings:
 
 1. Go to **Settings → Pages**.
-2. Under **Build and deployment**, select **GitHub Actions** as the source.
+2. Under **Build and deployment**, select **Deploy from a branch**.
+3. Choose the `gh-pages` branch and the `/ (root)` folder.
+4. Click **Save**.
+
+The `deploy.yml` workflow builds the site and pushes the `dist/` output to the `gh-pages` branch on every push to `main`.
 
 ## License
 
