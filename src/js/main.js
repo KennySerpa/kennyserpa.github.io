@@ -3,6 +3,7 @@
  * - Mobile navigation toggle
  * - Scroll-spy active state for in-page links
  * - Close mobile menu on link click / resize to desktop
+ * - Dynamic tenure counter
  */
 
 const MOBILE_BREAKPOINT_PX = 700;
@@ -69,5 +70,32 @@ function initScrollSpy() {
   window.addEventListener('scroll', updateActiveNav, { passive: true });
 }
 
+function initTenureCounter() {
+  const startDate = new Date('2023-08-26');
+  const now = new Date();
+
+  let years = now.getFullYear() - startDate.getFullYear();
+  let months = now.getMonth() - startDate.getMonth();
+  const dayDiff = now.getDate() - startDate.getDate();
+
+  if (dayDiff < 0) {
+    months -= 1;
+  }
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
+
+  const yearPart = years > 0 ? `${years} year${years === 1 ? '' : 's'}` : '';
+  const monthPart = months > 0 ? `${months} month${months === 1 ? '' : 's'}` : '';
+  const tenure = [yearPart, monthPart].filter(Boolean).join(', ');
+
+  const counter = document.getElementById('tenure-counter');
+  if (counter) {
+    counter.textContent = tenure;
+  }
+}
+
 initMobileNav();
 initScrollSpy();
+initTenureCounter();

@@ -234,6 +234,10 @@ button {
 
 /* RESUME HEADER */
 .resume-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
   padding: 28px 0 24px;
   border-bottom: 1px solid var(--border);
   margin-bottom: 32px;
@@ -257,7 +261,26 @@ button {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--accent);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+}
+
+.header-summary {
+  max-width: 520px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.header-tenure {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.header-tenure #tenure-counter {
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 .header-meta {
@@ -278,6 +301,65 @@ button {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+.header-right {
+  text-align: right;
+  padding-top: 8px;
+  flex-shrink: 0;
+}
+
+.recruiter-glance {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+.recruiter-role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.recruiter-tenure {
+  color: var(--text-secondary);
+}
+
+.recruiter-strength {
+  margin-top: 4px;
+  padding: 4px 10px;
+  background: rgba(74, 158, 255, 0.1);
+  color: var(--accent);
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  display: inline-block;
+  align-self: flex-end;
+}
+
+@media (max-width: 640px) {
+  .resume-header {
+    flex-direction: column;
+  }
+
+  .header-right {
+    text-align: left;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .recruiter-glance {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .recruiter-strength {
+    align-self: auto;
+  }
 }
 
 .btn-secondary {
