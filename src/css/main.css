@@ -761,10 +761,15 @@ footer {
     display: none !important;
   }
 
+  @page {
+    margin: 0.6in 0.7in;
+  }
+
   body {
-    background: #fff;
-    color: #000;
-    font-size: 12pt;
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 10.5pt;
+    line-height: 1.45;
   }
 
   .page {
@@ -772,39 +777,138 @@ footer {
     max-width: none;
   }
 
-  .resume-header,
-  .content-section,
-  .two-col {
-    margin-bottom: 20px;
+  .resume-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 16px;
+    margin-bottom: 18px;
   }
 
-  .resume-header h1,
-  .job-left h3,
-  .hc-num {
+  .resume-header h1 {
     color: #000;
+    font-size: 22pt;
+    margin-bottom: 4px;
+  }
+
+  .header-tagline {
+    color: #1565c0;
+    font-size: 11pt;
+  }
+
+  .header-summary {
+    color: #333;
+    max-width: none;
+    margin-bottom: 0;
+  }
+
+  .header-right {
+    padding-top: 6px;
+    text-align: right;
+  }
+
+  .recruiter-glance {
+    color: #333;
+    gap: 3px;
+    font-size: 9.5pt;
+  }
+
+  .recruiter-role {
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .recruiter-strength {
+    background: #e3f2fd;
+    color: #0d47a1;
+    border: 1px solid #90caf9;
+  }
+
+  .content-section,
+  .two-col {
+    margin-bottom: 16px;
+  }
+
+  .content-section h2 {
+    color: #555;
+    border-bottom-color: #bbb;
+    font-size: 9pt;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
   }
 
   .highlight-card {
-    border: 1px solid #ccc;
+    background: #fff;
+    border: 1px solid #ddd;
     break-inside: avoid;
+  }
+
+  .hc-num,
+  .hc-label {
+    color: #000;
   }
 
   .job {
     break-inside: avoid;
+    margin-bottom: 14px;
+  }
+
+  .job-left h3,
+  .job-company,
+  .job-date,
+  .job ul li {
+    color: #000;
+  }
+
+  .job ul li::before {
+    color: #1565c0;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .skill-cat {
+    color: #555;
+  }
+
+  .skill-vals {
+    color: #000;
+  }
+
+  .cert-item {
+    border-bottom-color: #ddd;
+  }
+
+  .cert-name,
+  .cert-date {
+    color: #000;
+  }
+
+  .edu-item {
+    background: #fff;
+    border-color: #ddd;
+  }
+
+  .edu-header h3,
+  .edu-org,
+  .edu-detail {
+    color: #000;
   }
 
   a {
     color: #000;
+    text-decoration: none;
   }
 
   a[href]::after {
-    content: ' (' attr(href) ')';
-    font-size: 0.8em;
-    word-break: break-all;
-  }
-
-  .nav-cta svg,
-  .icon {
-    display: none;
+    content: none;
   }
 }
