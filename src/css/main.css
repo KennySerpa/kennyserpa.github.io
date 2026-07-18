@@ -189,6 +189,25 @@ button {
   text-decoration: none;
 }
 
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 0;
+}
+
+.nav-icon:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--text-muted);
+}
+
 .nav-cta {
   display: inline-flex;
   align-items: center;
