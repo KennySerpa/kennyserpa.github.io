@@ -233,6 +233,13 @@ button {
   margin-bottom: 4px;
 }
 
+.header-tagline {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
 .header-meta {
   font-size: 0.82rem;
   color: var(--text-muted);
