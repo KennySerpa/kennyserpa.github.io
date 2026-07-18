@@ -296,7 +296,7 @@ button {
 /* HIGHLIGHTS */
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 12px;
 }
 
@@ -362,6 +362,14 @@ button {
 .job-company {
   font-size: 0.8rem;
   color: var(--text-muted);
+}
+
+.job-note {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 2px;
 }
 
 .job-date {
@@ -439,6 +447,40 @@ button {
 
 .cert-item:last-child {
   border-bottom: none;
+}
+
+/* EDUCATION */
+.edu-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.edu-header h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.edu-org {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.edu-detail {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
 }
 
 .cert-name {

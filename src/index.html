@@ -80,6 +80,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#certs">Certifications</a></li>
+            <li><a href="#education">Education</a></li>
             <li>
               <a
                 href="https://www.linkedin.com/in/kennyserpa/"
@@ -138,28 +139,37 @@
         <h2>Career Highlights</h2>
         <div class="highlights-grid">
           <div class="highlight-card">
-            <span class="hc-num">10,000+</span>
+            <span class="hc-num">~10,000/day</span>
             <span class="hc-label"
-              >daily credit decisions protected by government sanctions screening routine</span
+              >automated false-positive clearance for government sanctions screening, reducing
+              analyst queue volume</span
             >
           </div>
           <div class="highlight-card">
             <span class="hc-num">Zero</span>
             <span class="hc-label"
-              >production defects across 4 end-to-end installs on regulated mainframe systems</span
+              >production defects across 4 end-to-end mainframe releases I owned</span
             >
           </div>
           <div class="highlight-card">
-            <span class="hc-num">Emergency</span>
+            <span class="hc-num">1</span>
             <span class="hc-label"
-              >production outage prevented by catching a pre-install code deletion</span
+              >emergency change prevented by catching a pre-install code deletion during
+              validation</span
             >
           </div>
           <div class="highlight-card">
-            <span class="hc-num">Fraud</span>
+            <span class="hc-num">High-risk</span>
             <span class="hc-label"
-              >auto-clear logic guarded to prevent fraudulent bookings on a high-value credit
-              product</span
+              >product guard: fraud-review auto-clear logic for a premium card product, tightly
+              condition-guarded</span
+            >
+          </div>
+          <div class="highlight-card">
+            <span class="hc-num">Modernized</span>
+            <span class="hc-label"
+              >team validation with visual source compare and AI-assisted mainframe test
+              automation</span
             >
           </div>
         </div>
@@ -173,43 +183,56 @@
             <div class="job-left">
               <h3>Engineering Associate</h3>
               <span class="job-company">Wells Fargo — Mainframe Credit Card Decisioning</span>
+              <span class="job-note"
+                >Lateral move to engineering track with deeper development ownership</span
+              >
             </div>
             <time class="job-date" datetime="2024-09">Sep 2024 – Present</time>
           </div>
           <ul>
             <li>
-              Engineered a 500-line COBOL routine automating government sanctions screening for
-              approximately 10,000 credit card applications per day, determining whether applicants
-              match restricted party lists and routing confirmed hits to the Financial Crimes review
-              queue. Delivered with zero production defects.
+              Built a 500-line COBOL routine to automatically evaluate government-sanctioned-list
+              matches, clearing false positives while preserving true hits for analyst review;
+              processes approximately 10,000 applications daily.
             </li>
             <li>
-              Built a full transaction screen with bidirectional API integration, surfacing
-              compliance hit data from external services for underwriter review across 27+ records
-              per application.
+              Delivered a sanctions-data review screen with bidirectional SOAP/XML integration so
+              compliance analysts can view and override hit data without leaving the front-end
+              application.
             </li>
             <li>
-              Implemented fraud rule auto-clear logic for a high-value credit product, tightly
-              condition-guarded to prevent incorrectly clearing flags that could result in
-              fraudulent bookings.
+              Fixed instant-credit-approval handling for cobrand products; also independently
+              discovered and reported an unrelated production routing defect outside the original
+              story scope.
             </li>
             <li>
-              Extended backend data ingestion pipelines to support multiple new product initiatives,
-              including a high-value credit card line, targeted promotional offers, and PCI payment
-              tokenization.
+              Root-caused and fixed a policy-exception loop that forced underwriters to resubmit
+              applications twice, eliminating the extra pass.
             </li>
             <li>
-              Identified a pre-production code deletion during peer review; escalated the issue
-              before install, avoiding an emergency fix and a potential production outage.
+              Added ingestion support for targeted-offer fields; discovered and fixed an
+              out-of-scope alpha-in-numeric payload defect that would have blocked application
+              loads, and caught a teammate's copybook mismatch before it reached staging.
             </li>
             <li>
-              Piloted an AI-assisted test automation workflow using GitHub Copilot and PowerShell to
-              generate and execute test scenarios directly on the mainframe.
+              Implemented a tokenized card-reference field in an outbound status message as part of
+              a PCI tokenization initiative, validating backwards compatibility.
             </li>
             <li>
-              Contributing to a Spring Boot Java proof-of-concept web application on z/OS,
-              demonstrating that modern Java development is viable on legacy mainframe
-              infrastructure.
+              Synced upstream product data into decisioning tables so card-design codes stay
+              current; caught bad test data during UAT that would have reached the card processor.
+            </li>
+            <li>
+              Implemented fraud-review auto-clear logic for a premium product line,
+              condition-guarded to prevent fraudulent bookings.
+            </li>
+            <li>
+              Built an AI-assisted test automation workflow using GitHub Copilot, PowerShell, and
+              JCL to generate and execute mainframe test scenarios.
+            </li>
+            <li>
+              Contributing to a Spring Boot proof-of-concept web application on z/OS to visualize
+              integration traffic and demonstrate modern Java on legacy infrastructure.
             </li>
           </ul>
         </article>
@@ -224,28 +247,32 @@
           </div>
           <ul>
             <li>
-              Designed and implemented card image selection logic for a cobrand credit card launch,
-              injecting a product indicator into outbound XML boarding messages sent to the card
-              processor via HTTP/SOAP, plus a runtime feature toggle for safe deployment rollback.
+              Built cobrand card-image selection logic with a runtime feature toggle and outbound
+              XML boarding message to the card processor.
             </li>
             <li>
-              Extended a customer-facing panel with access code field and validation logic, enabling
-              applicants without existing online banking accounts to receive credentials needed to
-              upload income documents digitally.
+              Extended a customer-facing panel with an access-code field so applicants without
+              online banking credentials can upload income documents digitally.
             </li>
             <li>
-              Introduced VS Code with Endevor source compare to the team’s release process, adding
-              visual diff validation as a pre-install step and preventing multiple staging
-              environment mismatches from reaching production.
+              Caught a pre-install code deletion using visual source compare, preventing an
+              emergency change and earning formal recognition.
             </li>
             <li>
-              Owned four end-to-end software releases including ServiceNow change requests, source
-              control packaging, security scans, and SDLC task completion. All delivered on time
-              with no post-deploy defects.
+              Owned four end-to-end releases including change requests, source packaging, security
+              scans, and SDLC tasks — all delivered on time with no post-deploy defects.
             </li>
             <li>
-              Documented tribal knowledge and improved onboarding tools, reducing ramp-up time and
-              increasing team sprint capacity.
+              Introduced VS Code with Endevor source compare as a pre-install validation step,
+              preventing staging mismatches from reaching production.
+            </li>
+            <li>
+              Fixed an MQ payload edge case that was incorrectly clearing a customer name field
+              during processing.
+            </li>
+            <li>
+              Documented tribal knowledge and improved onboarding materials, reducing ramp-up time
+              for new team members.
             </li>
           </ul>
         </article>
@@ -255,8 +282,12 @@
         <section id="skills" class="content-section">
           <h2>Skills</h2>
           <div class="skill-block">
-            <span class="skill-cat">Languages &amp; Platform</span>
-            <span class="skill-vals">COBOL, CICS, JCL, z/OS, VSAM, DB2, Java</span>
+            <span class="skill-cat">Languages</span>
+            <span class="skill-vals">COBOL, Java, JCL, SQL</span>
+          </div>
+          <div class="skill-block">
+            <span class="skill-cat">Mainframe Platform</span>
+            <span class="skill-vals">z/OS, CICS, DB2, VSAM</span>
           </div>
           <div class="skill-block">
             <span class="skill-cat">Integration</span>
@@ -265,14 +296,12 @@
           <div class="skill-block">
             <span class="skill-cat">Tooling</span>
             <span class="skill-vals"
-              >GitHub Copilot, VS Code, Endevor, PowerShell, Zowe CLI, Jira, ServiceNow</span
+              >VS Code, Endevor, Zowe CLI, PowerShell, GitHub Copilot, Jira, ServiceNow</span
             >
           </div>
           <div class="skill-block">
             <span class="skill-cat">Cloud &amp; Modern</span>
-            <span class="skill-vals"
-              >Microsoft Azure, Spring Boot, AI-assisted development workflows</span
-            >
+            <span class="skill-vals">Microsoft Azure, Spring Boot, AI-assisted development</span>
           </div>
         </section>
 
@@ -303,13 +332,23 @@
               <span class="cert-name">IBM Z Xplore — Advanced</span
               ><time class="cert-date" datetime="2023-12">Dec 2023</time>
             </div>
-            <div class="cert-item">
-              <span class="cert-name">Per Scholas — IT &amp; Software Development</span
-              ><time class="cert-date" datetime="2023">2023</time>
-            </div>
           </div>
         </section>
       </div>
+
+      <section id="education" class="content-section">
+        <h2>Education</h2>
+        <div class="edu-item">
+          <div class="edu-header">
+            <h3>IT &amp; Software Development</h3>
+            <span class="edu-org">Per Scholas</span>
+          </div>
+          <p class="edu-detail">
+            Intensive bootcamp in software engineering, systems fundamentals, and enterprise
+            development practices.
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer>
