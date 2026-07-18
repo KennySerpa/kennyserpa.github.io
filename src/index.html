@@ -172,37 +172,60 @@
         <h2>Career Highlights</h2>
         <div class="highlights-grid">
           <div class="highlight-card">
-            <span class="hc-num">~10,000/day</span>
+            <span class="hc-num">High-volume</span>
             <span class="hc-label"
-              >automated false-positive clearance for government sanctions screening, reducing
-              analyst queue volume</span
+              >Built automation that clears thousands of safe credit-card applications daily through
+              sanctions screening so they can book automatically. Real matches still go to
+              analysts.</span
             >
           </div>
           <div class="highlight-card">
-            <span class="hc-num">Zero</span>
+            <span class="hc-num">On-time</span>
             <span class="hc-label"
-              >production defects across 4 end-to-end mainframe releases I owned</span
+              >Coordinated 4 mainframe installs, making sure all change requests, security scans,
+              packaging, and validation tasks were complete before the install window.</span
             >
           </div>
           <div class="highlight-card">
-            <span class="hc-num">1</span>
+            <span class="hc-num">Quality-focused</span>
             <span class="hc-label"
-              >emergency change prevented by catching a pre-install code deletion during
-              validation</span
+              >Found a pre-install code deletion before it reached production, preventing an
+              emergency change.</span
             >
           </div>
           <div class="highlight-card">
-            <span class="hc-num">High-risk</span>
+            <span class="hc-num">High-stakes</span>
             <span class="hc-label"
-              >product guard: fraud-review auto-clear logic for a premium card product, tightly
-              condition-guarded</span
+              >Built fraud-review auto-clear logic for a premium card product. A missed condition
+              could let a fraudulent application book; strict guarding prevents that.</span
             >
           </div>
           <div class="highlight-card">
-            <span class="hc-num">Modernized</span>
+            <span class="hc-num">Modern tooling</span>
             <span class="hc-label"
-              >team validation with visual source compare and AI-assisted mainframe test
-              automation</span
+              >Added VS Code source compare as a pre-install validation step, catching mismatches
+              before they reach production.</span
+            >
+          </div>
+          <div class="highlight-card">
+            <span class="hc-num">AI-assisted testing</span>
+            <span class="hc-label"
+              >Built a GitHub Copilot workflow that generates PowerShell/JCL test scenarios,
+              reducing manual test setup.</span
+            >
+          </div>
+          <div class="highlight-card">
+            <span class="hc-num">Beyond scope</span>
+            <span class="hc-label"
+              >Found an unrelated bug that made eligible customers miss out on instant credit for
+              immediate digital use.</span
+            >
+          </div>
+          <div class="highlight-card">
+            <span class="hc-num">UAT rescuer</span>
+            <span class="hc-label"
+              >Caught bad upstream requirements during UAT and made late code changes to keep the
+              install on track.</span
             >
           </div>
         </div>
@@ -224,48 +247,49 @@
           </div>
           <ul>
             <li>
-              Built a 500-line COBOL routine to automatically evaluate government-sanctioned-list
-              matches, clearing false positives while preserving true hits for analyst review;
-              processes approximately 10,000 applications daily.
+              Coded a COBOL/CICS routine that evaluates sanctions-list hits against SSN, DOB, and
+              last name to clear false positives while keeping true hits in analyst review.
             </li>
             <li>
-              Delivered a sanctions-data review screen with bidirectional SOAP/XML integration so
-              compliance analysts can view and override hit data without leaving the front-end
-              application.
+              Built a CICS review screen and SOAP/XML integration so analysts can view, page
+              through, and override sanctions hit data from within the front-end application.
             </li>
             <li>
-              Fixed instant-credit-approval handling for cobrand products; also independently
-              discovered and reported an unrelated production routing defect outside the original
-              story scope.
+              Fixed instant-credit-approval handling for partner credit cards so eligible customers
+              can use their card immediately. Also discovered an unrelated routing defect outside my
+              story and reported it to the Product Owner.
             </li>
             <li>
-              Root-caused and fixed a policy-exception loop that forced underwriters to resubmit
-              applications twice, eliminating the extra pass.
+              Fixed a loop that forced underwriters to resubmit applications twice. Applications now
+              redecide in one pass.
             </li>
             <li>
-              Added ingestion support for targeted-offer fields; discovered and fixed an
-              out-of-scope alpha-in-numeric payload defect that would have blocked application
-              loads, and caught a teammate's copybook mismatch before it reached staging.
+              Added new targeted-offer fields to the inbound payload. During UAT, found the upstream
+              system wasn't sending fields as specified in the requirements; made a late code change
+              to fix it before install.
             </li>
             <li>
-              Implemented a tokenized card-reference field in an outbound status message as part of
-              a PCI tokenization initiative, validating backwards compatibility.
+              Added a tokenized card-reference number to the outbound status message, replacing
+              account numbers in downstream data. Validated backwards compatibility so existing
+              consumers kept working.
             </li>
             <li>
-              Synced upstream product data into decisioning tables so card-design codes stay
-              current; caught bad test data during UAT that would have reached the card processor.
+              Synced upstream product data into product tables so card plastic types stay current.
+              Checked sample data outside my scope during UAT and caught a plastic-type mismatch,
+              preventing wrong card types from going downstream.
             </li>
             <li>
-              Implemented fraud-review auto-clear logic for a premium product line,
-              condition-guarded to prevent fraudulent bookings.
+              Coded auto-clear logic for fraud review on a premium product line. Only clears when
+              the upstream fraud system confirms it is safe, preventing fraudulent applications from
+              booking.
             </li>
             <li>
-              Built an AI-assisted test automation workflow using GitHub Copilot, PowerShell, and
-              JCL to generate and execute mainframe test scenarios.
+              Built a GitHub Copilot workflow that writes PowerShell scripts to generate JCL test
+              scenarios on z/OS, cutting down manual test setup.
             </li>
             <li>
-              Contributing to a Spring Boot proof-of-concept web application on z/OS to visualize
-              integration traffic and demonstrate modern Java on legacy infrastructure.
+              Contributing to a Spring Boot web app on z/OS that visualizes integration traffic
+              between ACAPS and downstream systems.
             </li>
           </ul>
         </article>
@@ -280,32 +304,30 @@
           </div>
           <ul>
             <li>
-              Built cobrand card-image selection logic with a runtime feature toggle and outbound
-              XML boarding message to the card processor.
+              Built card-image selection logic with a runtime toggle and outbound XML boarding
+              message so the right card design is sent at booking.
             </li>
             <li>
-              Extended a customer-facing panel with an access-code field so applicants without
-              online banking credentials can upload income documents digitally.
+              Added an access-code field to a customer panel so applicants without online banking
+              can still upload income documents.
             </li>
             <li>
-              Caught a pre-install code deletion using visual source compare, preventing an
-              emergency change and earning formal recognition.
+              Caught a pre-install code deletion using VS Code/Endevor source compare, preventing a
+              production outage and earning team recognition.
             </li>
             <li>
-              Owned four end-to-end releases including change requests, source packaging, security
-              scans, and SDLC tasks — all delivered on time with no post-deploy defects.
+              Coordinated four end-to-end releases through change requests, packaging, security
+              scans, and SDLC tasks — all on schedule.
             </li>
             <li>
-              Introduced VS Code with Endevor source compare as a pre-install validation step,
-              preventing staging mismatches from reaching production.
+              Introduced VS Code with Endevor source compare as a required pre-install validation
+              step, catching staging mismatches before production.
             </li>
             <li>
-              Fixed an MQ payload edge case that was incorrectly clearing a customer name field
-              during processing.
+              Fixed an MQ payload edge case that was clearing customer names during processing.
             </li>
             <li>
-              Documented tribal knowledge and improved onboarding materials, reducing ramp-up time
-              for new team members.
+              Wrote onboarding docs and captured team knowledge to get new hires up to speed faster.
             </li>
           </ul>
         </article>
