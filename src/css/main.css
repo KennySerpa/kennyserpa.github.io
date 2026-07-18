@@ -296,7 +296,7 @@ button {
 /* HIGHLIGHTS */
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 12px;
 }
 
@@ -407,6 +407,53 @@ button {
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   margin-bottom: 36px;
+}
+
+/* CASE STUDY */
+.case-study {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.case-study h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.case-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.case-study p {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.case-study p:last-of-type {
+  margin-bottom: 14px;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 3px 8px;
+  border-radius: 12px;
 }
 
 /* SKILLS */
