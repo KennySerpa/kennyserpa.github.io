@@ -875,6 +875,10 @@ footer {
     margin-bottom: 10px;
   }
 
+  #experience {
+    break-before: page;
+  }
+
   .job-left h3 {
     font-size: 10.5pt;
   }
