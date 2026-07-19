@@ -696,6 +696,18 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .nav-inner {
+    justify-content: flex-end;
+  }
+
+  .nav-inner > nav {
+    margin-left: 0;
+    flex: none;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .nav-toggle {
     display: flex;
   }
@@ -707,7 +719,8 @@ footer {
     right: 0;
     left: 0;
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 0;
     background: rgba(17, 17, 17, 0.98);
     border-bottom: 1px solid var(--border);
@@ -725,6 +738,19 @@ footer {
   .nav-links a {
     padding: 12px 8px;
     border-radius: 0;
+  }
+
+  .nav-links .nav-icon {
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    border: none;
+    padding: 12px 8px;
+    border-radius: 0;
+  }
+
+  .nav-links .nav-photo {
+    margin: 12px 8px;
   }
 
   .nav-cta {
