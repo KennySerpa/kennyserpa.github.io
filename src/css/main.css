@@ -114,6 +114,11 @@ button {
   justify-content: space-between;
 }
 
+.nav-inner > nav {
+  flex: 1;
+  margin-left: 24px;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -168,6 +173,7 @@ button {
 .nav-links {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   list-style: none;
 }
