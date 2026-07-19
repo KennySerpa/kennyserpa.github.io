@@ -58,7 +58,7 @@ footer {
 }
 
 .resume-header h1 {
-  color: #000;
+  color: #000 !important;
   font-size: 16pt;
   line-height: 1.1;
   margin-bottom: 1px;
@@ -67,12 +67,12 @@ footer {
 .header-tagline {
   color: #0a3d8f;
   font-size: 8.5pt;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1px;
 }
 
 .header-summary {
-  color: #111;
+  color: #000;
   max-width: none;
   margin-bottom: 0;
   font-size: 8pt;
@@ -86,15 +86,15 @@ footer {
 }
 
 .recruiter-glance {
-  color: #111;
+  color: #000;
   gap: 1px;
   font-size: 7.5pt;
 }
 
 .recruiter-role {
   color: #000;
-  font-size: 8.5pt;
-  font-weight: 700;
+  font-size: 9pt;
+  font-weight: 800;
 }
 
 .recruiter-tenure,
@@ -103,11 +103,11 @@ footer {
 }
 
 .recruiter-strength {
-  background: #d6eaff;
-  color: #0a3d8f;
-  border: 1px solid #7ab8ff;
+  background: #cfe4ff;
+  color: #08306b;
+  border: 1px solid #5fa3ff;
   font-size: 7pt;
-  font-weight: 600;
+  font-weight: 700;
   padding: 1px 4px;
   margin-top: 2px;
 }
@@ -151,7 +151,7 @@ footer {
   min-height: 0 !important;
   background: transparent !important;
   border: none !important;
-  border-left: 2px solid #0a3d8f !important;
+  border-left: 2px solid #08306b !important;
   padding: 1px 0 2px 6px !important;
   margin-bottom: 3px;
   break-inside: avoid;
@@ -184,7 +184,7 @@ footer {
   width: auto !important;
   height: auto !important;
   overflow: visible !important;
-  color: #111 !important;
+  color: #000 !important;
   font-size: 8pt;
   line-height: 1.2;
 }
@@ -222,7 +222,7 @@ footer {
 .job-company,
 .job-date,
 .job-note {
-  color: #111;
+  color: #000;
   font-size: 8pt;
 }
 
@@ -232,14 +232,14 @@ footer {
 }
 
 .job ul li {
-  color: #111;
+  color: #000;
   font-size: 8pt;
   margin-bottom: 0;
   line-height: 1.2;
 }
 
 .job ul li::before {
-  color: #0a3d8f;
+  color: #08306b;
 }
 
 /* --------------------------------------------------------------------------
@@ -264,7 +264,7 @@ footer {
 }
 
 .skill-vals {
-  color: #111;
+  color: #000;
   font-size: 8pt;
 }
 
@@ -277,12 +277,12 @@ footer {
 }
 
 .cert-name {
-  color: #111;
+  color: #000;
   font-size: 8pt;
 }
 
 .cert-date {
-  color: #111;
+  color: #000;
   font-size: 7pt;
 }
 
@@ -297,8 +297,8 @@ footer {
 
 .edu-item {
   background: #fff;
-  border: 1px solid #bbb;
-  border-left: 2px solid #0a3d8f;
+  border: 1px solid #999;
+  border-left: 2px solid #08306b;
   padding: 3px 6px;
   break-inside: avoid;
   page-break-inside: avoid;
@@ -317,12 +317,12 @@ footer {
 }
 
 .edu-org {
-  color: #111;
+  color: #000;
   font-size: 8pt;
 }
 
 .edu-detail {
-  color: #111;
+  color: #000;
   font-size: 8pt;
   line-height: 1.2;
 }
