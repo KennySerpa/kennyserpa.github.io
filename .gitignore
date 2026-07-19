@@ -6,6 +6,8 @@ node_modules/
 dist/
 *.tsbuildinfo
 
+
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
@@ -33,3 +35,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 .cache/
+
+# Local backups
+*.bak

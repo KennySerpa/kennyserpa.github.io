@@ -4,6 +4,7 @@
     "void-style": ["error", { "style": "selfclosing" }],
     "doctype-style": ["error", { "style": "lowercase" }],
     "no-trailing-whitespace": "warn",
-    "element-required-attributes": "warn"
+    "element-required-attributes": "warn",
+    "prefer-native-element": "off"
   }
 }

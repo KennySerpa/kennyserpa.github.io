@@ -9,6 +9,7 @@
     />
     <meta name="theme-color" content="#111111" />
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Kenny Serpa — Software Engineer" />
     <meta
@@ -19,6 +20,7 @@
     <meta property="og:image" content="https://kennyserpa.github.io/photo.jpg" />
     <meta property="og:image:alt" content="Kenny Serpa — Software Engineer" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Kenny Serpa — Software Engineer" />
     <meta
@@ -37,13 +39,16 @@
     <link rel="me" href="https://www.linkedin.com/in/kennyserpa/" />
     <link rel="me" href="https://github.com/KennySerpa" />
 
+    <!-- Favicon: emoji avatar -->
     <link
       rel="icon"
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E👨🏽‍💻%3C/text%3E%3C/svg%3E"
     />
+
     <link rel="stylesheet" href="./css/main.css" />
 
+    <!-- Structured data for search engines -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -89,6 +94,10 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- -------------------------------------------------------------------
+         SITE HEADER
+         Fixed navigation with mobile hamburger menu.
+         ------------------------------------------------------------------- -->
     <header class="site-header">
       <div class="nav-inner">
         <nav aria-label="Primary">
@@ -103,6 +112,7 @@
             <span class="nav-toggle-bar" aria-hidden="true"></span>
             <span class="nav-toggle-bar" aria-hidden="true"></span>
           </button>
+
           <ul id="nav-menu" class="nav-links">
             <li><a href="#highlights">Highlights</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -163,7 +173,11 @@
       </div>
     </header>
 
+    <!-- -------------------------------------------------------------------
+         MAIN CONTENT
+         ------------------------------------------------------------------- -->
     <main id="main-content" class="page">
+      <!-- Resume header --------------------------------------------------- -->
       <section class="resume-header" aria-label="Introduction">
         <div class="header-left">
           <h1>Kenny Serpa</h1>
@@ -172,11 +186,12 @@
             I own the journey and data so the business gets what it expects.
           </p>
           <div class="header-actions">
-            <button type="button" class="btn-secondary" onclick="window.print()">
+            <button type="button" class="btn-secondary" onclick="downloadResumePdf()">
               Download PDF
             </button>
           </div>
         </div>
+
         <section class="header-right" aria-label="At a glance">
           <div class="recruiter-glance">
             <p class="recruiter-role">Software Engineer</p>
@@ -188,83 +203,216 @@
         </section>
       </section>
 
+      <!-- Career highlights: flip-card grid ------------------------------- -->
       <section id="highlights" class="content-section">
         <h2>Career Highlights</h2>
         <div class="highlights-grid">
-          <div class="highlight-card">
-            <span class="hc-num">High-volume</span>
-            <span class="hc-label"
-              >Built automation that clears thousands of safe credit-card applications daily through
-              sanctions screening so they can book automatically. Real matches still go to
-              analysts.</span
-            >
+          <div
+            class="highlight-card"
+            data-card-id="high-volume"
+            tabindex="0"
+            role="button"
+            aria-label="Flip card: High-volume"
+          >
+            <span class="hc-inner">
+              <span class="hc-front">
+                <span class="hc-num">High-volume</span>
+                <span class="hc-teaser"
+                  >Scaling automated decisions across thousands of daily applications.</span
+                >
+                <span class="hc-hint">Click to read more</span>
+              </span>
+              <span class="hc-back">
+                Built automation that clears thousands of safe credit-card applications daily
+                through sanctions screening so they can book automatically. Real matches still go to
+                analysts.
+              </span>
+            </span>
           </div>
-          <div class="highlight-card">
-            <span class="hc-num">On-time</span>
-            <span class="hc-label"
-              >Coordinated 4 mainframe installs, making sure all change requests, security scans,
-              packaging, and validation tasks were complete before the install window.</span
-            >
+
+          <div
+            class="highlight-card"
+            data-card-id="on-time"
+            tabindex="0"
+            role="button"
+            aria-label="Flip card: On-time"
+          >
+            <span class="hc-inner">
+              <span class="hc-front">
+                <span class="hc-num">On-time</span>
+                <span class="hc-teaser">Shipping mainframe changes on schedule, every time.</span>
+                <span class="hc-hint">Click to read more</span>
+              </span>
+              <span class="hc-back">
+                Coordinated 4 mainframe installs, making sure all change requests, security scans,
+                packaging, and validation tasks were complete before the install window.
+              </span>
+            </span>
           </div>
-          <div class="highlight-card">
-            <span class="hc-num">Quality-focused</span>
-            <span class="hc-label"
-              >Found a pre-install code deletion before it reached production, preventing an
-              emergency change.</span
-            >
+
+          <div
+            class="highlight-card"
+            data-card-id="quality-focused"
+            tabindex="0"
+            role="button"
+            aria-label="Flip card: Quality-focused"
+          >
+            <span class="hc-inner">
+              <span class="hc-front">
+                <span class="hc-num">Quality-focused</span>
+                <span class="hc-teaser">Catching defects before they reach production.</span>
+                <span class="hc-hint">Click to read more</span>
+              </span>
+              <span class="hc-back">
+                Found a pre-install code deletion before it reached production, preventing an
+                emergency change.
+              </span>
+            </span>
           </div>
-          <div class="highlight-card">
-            <span class="hc-num">High-stakes</span>
-            <span class="hc-label"
-              >Built fraud-review auto-clear logic for a premium card product. A missed condition
-              could let a fraudulent application book; strict guarding prevents that.</span
-            >
+
+          <div
+            class="highlight-card"
+            data-card-id="high-stakes"
+            tabindex="0"
+            role="button"
+            aria-label="Flip card: High-stakes"
+          >
+            <span class="hc-inner">
+              <span class="hc-front">
+                <span class="hc-num">High-stakes</span>
+                <span class="hc-teaser">Guarding fraud-review logic for premium products.</span>
+                <span class="hc-hint">Click to read more</span>
+              </span>
+              <span class="hc-back">
+                Built fraud-review auto-clear logic for a premium card product. A missed condition
+                could let a fraudulent application book; strict guarding prevents that.
+              </span>
+            </span>
           </div>
-          <div class="highlight-card">
-            <span class="hc-num">Modern tooling</span>
-            <span class="hc-label"
-              >Added VS Code source compare as a pre-install validation step, catching mismatches
-              before they reach production.</span
-            >
+
+          <div
+            class="highlight-card"
+            data-card-id="modern-tooling"
+            tabindex="0"
+            role="button"
+            aria-label="Flip card: Modern tooling"
+          >
+            <span class="hc-inner">
+              <span class="hc-front">
+                <span class="hc-num">Modern tooling</span>
+                <span class="hc-teaser">Bringing modern validation into mainframe workflows.</span>
+                <span class="hc-hint">Click to read more</span>
+              </span>
+              <span class="hc-back">
+                Added VS Code source compare as a pre-install validation step, catching mismatches
+                before they reach production.
+              </span>
+            </span>
           </div>
-          <div class="highlight-card">
-            <span class="hc-num">AI-assisted testing</span>
-            <span class="hc-label"
-              >Built a GitHub Copilot workflow that generates PowerShell/JCL test scenarios,
-              reducing manual test setup.</span
-            >
+
+          <div
+            class="highlight-card"
+            data-card-id="ai-assisted-testing"
+            tabindex="0"
+            role="button"
+            aria-label="Flip card: AI-assisted testing"
+          >
+            <span class="hc-inner">
+              <span class="hc-front">
+                <span class="hc-num">AI-assisted testing</span>
+                <span class="hc-teaser">Using Copilot to accelerate test scenarios.</span>
+                <span class="hc-hint">Click to read more</span>
+              </span>
+              <span class="hc-back">
+                Built a GitHub Copilot workflow that generates PowerShell/JCL test scenarios,
+                reducing manual test setup.
+              </span>
+            </span>
           </div>
-          <div class="highlight-card">
-            <span class="hc-num">Beyond scope</span>
-            <span class="hc-label"
-              >Found an unrelated bug that made eligible customers miss out on instant credit for
-              immediate digital use.</span
-            >
+
+          <div
+            class="highlight-card"
+            data-card-id="beyond-scope"
+            tabindex="0"
+            role="button"
+            aria-label="Flip card: Beyond scope"
+          >
+            <span class="hc-inner">
+              <span class="hc-front">
+                <span class="hc-num">Beyond scope</span>
+                <span class="hc-teaser">Finding wins outside the assigned story.</span>
+                <span class="hc-hint">Click to read more</span>
+              </span>
+              <span class="hc-back">
+                Found an unrelated bug that made eligible customers miss out on instant credit for
+                immediate digital use.
+              </span>
+            </span>
           </div>
-          <div class="highlight-card">
-            <span class="hc-num">UAT rescuer</span>
-            <span class="hc-label"
-              >Caught bad upstream requirements during UAT and made late code changes to keep the
-              install on track.</span
-            >
+
+          <div
+            class="highlight-card"
+            data-card-id="uat-rescuer"
+            tabindex="0"
+            role="button"
+            aria-label="Flip card: UAT rescuer"
+          >
+            <span class="hc-inner">
+              <span class="hc-front">
+                <span class="hc-num">UAT rescuer</span>
+                <span class="hc-teaser">Saving installs when requirements shift late.</span>
+                <span class="hc-hint">Click to read more</span>
+              </span>
+              <span class="hc-back">
+                Caught bad upstream requirements during UAT and made late code changes to keep the
+                install on track.
+              </span>
+            </span>
           </div>
-          <div class="highlight-card">
-            <span class="hc-num">Global compliance</span>
-            <span class="hc-label"
-              >Coded logic that flags applicants from sanctioned countries and routes them to manual
-              review with compliant customer notices.</span
-            >
+
+          <div
+            class="highlight-card"
+            data-card-id="global-compliance"
+            tabindex="0"
+            role="button"
+            aria-label="Flip card: Global compliance"
+          >
+            <span class="hc-inner">
+              <span class="hc-front">
+                <span class="hc-num">Global compliance</span>
+                <span class="hc-teaser">Routing sanctions-flagged applications safely.</span>
+                <span class="hc-hint">Click to read more</span>
+              </span>
+              <span class="hc-back">
+                Coded logic that flags applicants from sanctioned countries and routes them to
+                manual review with compliant customer notices.
+              </span>
+            </span>
           </div>
-          <div class="highlight-card">
-            <span class="hc-num">Java Spring Boot</span>
-            <span class="hc-label"
-              >Building a web app on z/OS that visualizes mainframe integration traffic in a modern
-              web interface.</span
-            >
+
+          <div
+            class="highlight-card"
+            data-card-id="java-spring-boot"
+            tabindex="0"
+            role="button"
+            aria-label="Flip card: Java Spring Boot"
+          >
+            <span class="hc-inner">
+              <span class="hc-front">
+                <span class="hc-num">Java Spring Boot</span>
+                <span class="hc-teaser">Building modern interfaces for mainframe data.</span>
+                <span class="hc-hint">Click to read more</span>
+              </span>
+              <span class="hc-back">
+                Building a web app on z/OS that visualizes mainframe integration traffic in a modern
+                web interface.
+              </span>
+            </span>
           </div>
         </div>
       </section>
 
+      <!-- Experience ------------------------------------------------------ -->
       <section id="experience" class="content-section">
         <h2>Experience</h2>
 
@@ -367,6 +515,7 @@
         </article>
       </section>
 
+      <!-- Skills + certifications ---------------------------------------- -->
       <div class="two-col">
         <section id="skills" class="content-section">
           <h2>Skills</h2>
@@ -398,33 +547,34 @@
           <h2>Certifications</h2>
           <div class="cert-list">
             <div class="cert-item">
-              <span class="cert-name">Microsoft Azure Fundamentals (AZ-900)</span
-              ><time class="cert-date" datetime="2024-10">Oct 2024</time>
+              <span class="cert-name">Microsoft Azure Fundamentals (AZ-900)</span>
+              <time class="cert-date" datetime="2024-10">Oct 2024</time>
             </div>
             <div class="cert-item">
-              <span class="cert-name">Generative AI: Introduction &amp; Applications</span
-              ><time class="cert-date" datetime="2026-01">Jan 2026</time>
+              <span class="cert-name">Generative AI: Introduction &amp; Applications</span>
+              <time class="cert-date" datetime="2026-01">Jan 2026</time>
             </div>
             <div class="cert-item">
-              <span class="cert-name">IBM Z Xplore — All Star</span
-              ><time class="cert-date" datetime="2025-07">Jul 2025</time>
+              <span class="cert-name">IBM Z Xplore — All Star</span>
+              <time class="cert-date" datetime="2025-07">Jul 2025</time>
             </div>
             <div class="cert-item">
-              <span class="cert-name">Fundamentals for Zowe</span
-              ><time class="cert-date" datetime="2024-04">Apr 2024</time>
+              <span class="cert-name">Fundamentals for Zowe</span>
+              <time class="cert-date" datetime="2024-04">Apr 2024</time>
             </div>
             <div class="cert-item">
-              <span class="cert-name">COBOL Programming with VS Code</span
-              ><time class="cert-date" datetime="2023-12">Dec 2023</time>
+              <span class="cert-name">COBOL Programming with VS Code</span>
+              <time class="cert-date" datetime="2023-12">Dec 2023</time>
             </div>
             <div class="cert-item">
-              <span class="cert-name">IBM Z Xplore — Advanced</span
-              ><time class="cert-date" datetime="2023-12">Dec 2023</time>
+              <span class="cert-name">IBM Z Xplore — Advanced</span>
+              <time class="cert-date" datetime="2023-12">Dec 2023</time>
             </div>
           </div>
         </section>
       </div>
 
+      <!-- Education ------------------------------------------------------- -->
       <section id="education" class="content-section">
         <h2>Education</h2>
         <div class="edu-item">
@@ -440,6 +590,9 @@
       </section>
     </main>
 
+    <!-- -------------------------------------------------------------------
+         FOOTER
+         ------------------------------------------------------------------- -->
     <footer>
       <div class="footer-inner">
         <span>Phoenix, AZ</span>
