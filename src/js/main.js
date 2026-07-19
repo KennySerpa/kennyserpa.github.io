@@ -12,7 +12,7 @@
 const MOBILE_BREAKPOINT_PX = 700;
 const SCROLL_OFFSET_PX = 100;
 
-const API_URL = 'https://api.kserpa.com';
+const API_URL = typeof __API_URL__ !== 'undefined' ? __API_URL__ : 'https://api.kserpa.com';
 const FALLBACK_PDF_URL = './resume.pdf';
 const SESSION_KEY = 'ks_session_id';
 
@@ -229,9 +229,14 @@ async function downloadResumePdf() {
 }
 
 /**
- * Expose the PDF function globally so the inline onclick handler can use it.
+ * Bind event listeners to elements with data-action attributes.
+ * Keeps behavior in JavaScript instead of inline onclick handlers.
  */
-window.downloadResumePdf = downloadResumePdf;
+function initActionButtons() {
+  document.querySelectorAll('[data-action="download-pdf"]').forEach(button => {
+    button.addEventListener('click', downloadResumePdf);
+  });
+}
 
 /**
  * Boot the application once the DOM is ready.
@@ -245,6 +250,7 @@ function init() {
   initScrollSpy();
   initTenureCounter();
   initFlipCards();
+  initActionButtons();
   trackEvent('page_view');
 }
 

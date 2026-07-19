@@ -22,6 +22,7 @@
     "stylelint-config-standard": "^36.0.1",
     "vite": "^6.4.3"
   },
+  "dependencies": {},
   "engines": {
     "node": ">=18.0.0"
   }
