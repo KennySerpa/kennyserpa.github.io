@@ -65,13 +65,14 @@ footer {
 }
 
 .header-tagline {
-  color: #0d47a1;
+  color: #0a3d8f;
   font-size: 8.5pt;
+  font-weight: 600;
   margin-bottom: 1px;
 }
 
 .header-summary {
-  color: #333;
+  color: #111;
   max-width: none;
   margin-bottom: 0;
   font-size: 8pt;
@@ -85,7 +86,7 @@ footer {
 }
 
 .recruiter-glance {
-  color: #333;
+  color: #111;
   gap: 1px;
   font-size: 7.5pt;
 }
@@ -93,7 +94,7 @@ footer {
 .recruiter-role {
   color: #000;
   font-size: 8.5pt;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .recruiter-tenure,
@@ -102,10 +103,11 @@ footer {
 }
 
 .recruiter-strength {
-  background: #e3f2fd;
-  color: #0d47a1;
-  border: 1px solid #90caf9;
+  background: #d6eaff;
+  color: #0a3d8f;
+  border: 1px solid #7ab8ff;
   font-size: 7pt;
+  font-weight: 600;
   padding: 1px 4px;
   margin-top: 2px;
 }
@@ -119,9 +121,10 @@ footer {
 }
 
 .content-section h2 {
-  color: #333;
-  border-bottom: 1px solid #bbb;
+  color: #000;
+  border-bottom: 1px solid #888;
   font-size: 8pt;
+  font-weight: 700;
   margin-bottom: 4px;
   padding-bottom: 1px;
   text-transform: uppercase;
@@ -148,7 +151,7 @@ footer {
   min-height: 0 !important;
   background: transparent !important;
   border: none !important;
-  border-left: 2px solid #1565c0 !important;
+  border-left: 2px solid #0a3d8f !important;
   padding: 1px 0 2px 6px !important;
   margin-bottom: 3px;
   break-inside: avoid;
@@ -181,7 +184,7 @@ footer {
   width: auto !important;
   height: auto !important;
   overflow: visible !important;
-  color: #222 !important;
+  color: #111 !important;
   font-size: 8pt;
   line-height: 1.2;
 }
@@ -219,6 +222,7 @@ footer {
 .job-company,
 .job-date,
 .job-note {
+  color: #111;
   font-size: 8pt;
 }
 
@@ -228,14 +232,14 @@ footer {
 }
 
 .job ul li {
-  color: #222;
+  color: #111;
   font-size: 8pt;
   margin-bottom: 0;
   line-height: 1.2;
 }
 
 .job ul li::before {
-  color: #1565c0;
+  color: #0a3d8f;
 }
 
 /* --------------------------------------------------------------------------
@@ -253,13 +257,14 @@ footer {
 }
 
 .skill-cat {
-  color: #555;
+  color: #000;
   font-size: 7.5pt;
+  font-weight: 700;
   display: block;
 }
 
 .skill-vals {
-  color: #222;
+  color: #111;
   font-size: 8pt;
 }
 
@@ -272,12 +277,12 @@ footer {
 }
 
 .cert-name {
-  color: #222;
+  color: #111;
   font-size: 8pt;
 }
 
 .cert-date {
-  color: #555;
+  color: #111;
   font-size: 7pt;
 }
 
@@ -292,8 +297,8 @@ footer {
 
 .edu-item {
   background: #fff;
-  border: 1px solid #ddd;
-  border-left: 2px solid #1565c0;
+  border: 1px solid #bbb;
+  border-left: 2px solid #0a3d8f;
   padding: 3px 6px;
   break-inside: avoid;
   page-break-inside: avoid;
@@ -312,12 +317,12 @@ footer {
 }
 
 .edu-org {
-  color: #555;
+  color: #111;
   font-size: 8pt;
 }
 
 .edu-detail {
-  color: #222;
+  color: #111;
   font-size: 8pt;
   line-height: 1.2;
 }
