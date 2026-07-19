@@ -59,20 +59,23 @@ footer {
 
 .resume-header h1 {
   color: #000 !important;
+  background: transparent !important;
   font-size: 16pt;
   line-height: 1.1;
   margin-bottom: 1px;
 }
 
 .header-tagline {
-  color: #0a3d8f;
+  color: #0a3d8f !important;
+  background: transparent !important;
   font-size: 8.5pt;
   font-weight: 700;
   margin-bottom: 1px;
 }
 
 .header-summary {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   max-width: none;
   margin-bottom: 0;
   font-size: 8pt;
@@ -86,26 +89,35 @@ footer {
 }
 
 .recruiter-glance {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   gap: 1px;
   font-size: 7.5pt;
 }
 
 .recruiter-role {
-  color: #000;
-  font-size: 9pt;
-  font-weight: 800;
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 10pt;
+  font-weight: 900;
 }
 
 .recruiter-tenure,
 .recruiter-tenure span {
   color: #000 !important;
+  background: transparent !important;
+}
+
+.recruiter-focus,
+.recruiter-location {
+  color: #000 !important;
+  background: transparent !important;
 }
 
 .recruiter-strength {
-  background: #cfe4ff;
-  color: #08306b;
-  border: 1px solid #5fa3ff;
+  background: #cfe4ff !important;
+  color: #08306b !important;
+  border: 1px solid #5fa3ff !important;
   font-size: 7pt;
   font-weight: 700;
   padding: 1px 4px;
@@ -121,7 +133,8 @@ footer {
 }
 
 .content-section h2 {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   border-bottom: 1px solid #888;
   font-size: 8pt;
   font-weight: 700;
@@ -191,7 +204,7 @@ footer {
 
 .highlight-card .hc-back::before {
   content: attr(data-title) '. ';
-  color: #000;
+  color: #000 !important;
   font-weight: 700;
 }
 
@@ -213,7 +226,8 @@ footer {
 }
 
 .job-left h3 {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   font-size: 9pt;
   font-weight: 700;
   margin-bottom: 0;
@@ -222,7 +236,8 @@ footer {
 .job-company,
 .job-date,
 .job-note {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   font-size: 8pt;
 }
 
@@ -232,7 +247,8 @@ footer {
 }
 
 .job ul li {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   font-size: 8pt;
   margin-bottom: 0;
   line-height: 1.2;
@@ -257,14 +273,16 @@ footer {
 }
 
 .skill-cat {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   font-size: 7.5pt;
   font-weight: 700;
   display: block;
 }
 
 .skill-vals {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   font-size: 8pt;
 }
 
@@ -277,12 +295,14 @@ footer {
 }
 
 .cert-name {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   font-size: 8pt;
 }
 
 .cert-date {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   font-size: 7pt;
 }
 
@@ -296,10 +316,10 @@ footer {
 }
 
 .edu-item {
-  background: #fff;
-  border: 1px solid #999;
-  border-left: 2px solid #08306b;
-  padding: 3px 6px;
+  background: transparent !important;
+  border: none !important;
+  border-left: 2px solid #08306b !important;
+  padding: 2px 0 2px 6px;
   break-inside: avoid;
   page-break-inside: avoid;
   break-before: avoid;
@@ -307,22 +327,32 @@ footer {
 }
 
 .edu-header {
-  margin-bottom: 0;
+  margin-bottom: 1px;
   flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
 }
 
 .edu-header h3 {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   font-size: 9pt;
+  margin-bottom: 0;
 }
 
 .edu-org {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   font-size: 8pt;
+  white-space: nowrap;
 }
 
 .edu-detail {
-  color: #000;
+  color: #000 !important;
+  background: transparent !important;
   font-size: 8pt;
   line-height: 1.2;
+  margin: 0;
 }
