@@ -1,0 +1,323 @@
+/* ==========================================================================
+   Kenny Serpa Resume — Print Stylesheet
+   Purpose: Clean, compact styles for PDF generation and browser printing.
+   This file is loaded with media="print" so it never affects the screen UI.
+   ========================================================================== */
+
+@page {
+  margin: 0.45in 0.55in;
+  size: letter;
+}
+
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  background: #fff !important;
+  color: #000 !important;
+  font-size: 9pt;
+  line-height: 1.3;
+}
+
+/* Hide chrome that does not belong on a resume */
+.site-header,
+.skip-link,
+.header-actions,
+footer {
+  display: none !important;
+}
+
+.page {
+  padding: 0;
+  max-width: none;
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+.resume-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #999;
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+  break-inside: avoid;
+}
+
+.resume-header h1 {
+  color: #000;
+  font-size: 17pt;
+  margin-bottom: 0;
+}
+
+.header-tagline {
+  color: #0d47a1;
+  font-size: 9pt;
+  margin-bottom: 1px;
+}
+
+.header-summary {
+  color: #333;
+  max-width: none;
+  margin-bottom: 0;
+  font-size: 8.5pt;
+  line-height: 1.3;
+}
+
+.header-right {
+  padding-top: 0;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.recruiter-glance {
+  color: #333;
+  gap: 0;
+  font-size: 8pt;
+}
+
+.recruiter-role {
+  color: #000;
+  font-size: 9pt;
+  font-weight: 600;
+}
+
+.recruiter-tenure,
+.recruiter-tenure span {
+  color: #000 !important;
+}
+
+.recruiter-strength {
+  background: #e3f2fd;
+  color: #0d47a1;
+  border: 1px solid #90caf9;
+  font-size: 7.5pt;
+  padding: 1px 5px;
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+.content-section,
+.two-col {
+  margin-bottom: 6px;
+}
+
+.content-section h2 {
+  color: #333;
+  border-bottom: 1px solid #bbb;
+  font-size: 8pt;
+  margin-bottom: 4px;
+  padding-bottom: 1px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* --------------------------------------------------------------------------
+   Career Highlights — render as a compact list in print
+   -------------------------------------------------------------------------- */
+.highlights-grid {
+  display: block !important;
+  column-count: 2;
+  column-gap: 16px;
+  margin-bottom: 4px;
+}
+
+.highlight-card {
+  display: block !important;
+  position: relative !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-left: 2px solid #1565c0 !important;
+  padding: 1px 0 2px 6px !important;
+  margin-bottom: 3px;
+  break-inside: avoid;
+}
+
+.highlight-card .hc-inner {
+  display: block !important;
+  position: static !important;
+  transform: none !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.highlight-card .hc-front,
+.highlight-card .hc-back {
+  display: block !important;
+  position: static !important;
+  transform: none !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.highlight-card .hc-front {
+  display: none !important;
+}
+
+.hc-num {
+  color: #000;
+  font-size: 8pt;
+  font-weight: 700;
+  display: inline;
+  line-height: 1.2;
+}
+
+.hc-num::after {
+  content: '. ';
+}
+
+.hc-back {
+  color: #222;
+  font-size: 8pt;
+  line-height: 1.2;
+  display: inline;
+}
+
+.hc-teaser,
+.hc-hint {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Experience
+   -------------------------------------------------------------------------- */
+.job {
+  break-inside: avoid;
+  margin-bottom: 5px;
+}
+
+.job-header {
+  margin-bottom: 1px;
+}
+
+.job-left h3 {
+  color: #000;
+  font-size: 9pt;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.job-company,
+.job-date,
+.job-note {
+  font-size: 8pt;
+}
+
+.job ul {
+  margin-top: 1px;
+  padding-left: 12px;
+}
+
+.job ul li {
+  color: #222;
+  font-size: 8pt;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+.job ul li::before {
+  color: #1565c0;
+}
+
+/* --------------------------------------------------------------------------
+   Skills + Certifications
+   -------------------------------------------------------------------------- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  break-inside: avoid;
+}
+
+.skill-block {
+  margin-bottom: 2px;
+}
+
+.skill-cat {
+  color: #555;
+  font-size: 7.5pt;
+  display: block;
+}
+
+.skill-vals {
+  color: #222;
+  font-size: 8pt;
+}
+
+.cert-list {
+  gap: 1px;
+}
+
+.cert-item {
+  padding-bottom: 1px;
+}
+
+.cert-name {
+  color: #222;
+  font-size: 8pt;
+}
+
+.cert-date {
+  color: #555;
+  font-size: 7pt;
+}
+
+/* --------------------------------------------------------------------------
+   Education
+   -------------------------------------------------------------------------- */
+#education {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  break-before: auto;
+}
+
+.edu-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 2px solid #1565c0;
+  padding: 3px 6px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  break-before: avoid;
+  page-break-before: avoid;
+}
+
+.edu-header {
+  margin-bottom: 0;
+  flex-wrap: nowrap;
+}
+
+.edu-header h3 {
+  color: #000;
+  font-size: 9pt;
+}
+
+.edu-org {
+  color: #555;
+  font-size: 8pt;
+}
+
+.edu-detail {
+  color: #222;
+  font-size: 8pt;
+  line-height: 1.2;
+}
