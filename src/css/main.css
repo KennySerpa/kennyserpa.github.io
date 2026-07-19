@@ -900,9 +900,7 @@ footer {
     break-inside: avoid;
   }
 
-  .highlight-card .hc-inner,
-  .highlight-card .hc-front,
-  .highlight-card .hc-back {
+  .highlight-card .hc-inner {
     display: block !important;
     position: static;
     transform: none !important;
@@ -913,8 +911,16 @@ footer {
     min-height: 0;
   }
 
-  .highlight-card .hc-front {
-    display: none !important;
+  .highlight-card .hc-front,
+  .highlight-card .hc-back {
+    display: inline !important;
+    position: static;
+    transform: none !important;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
   }
 
   .hc-num {
