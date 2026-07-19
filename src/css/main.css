@@ -293,6 +293,11 @@ button {
   margin-bottom: 10px;
 }
 
+/* Only show the portfolio URL in print/PDF, not on the live webpage */
+.header-website {
+  display: none;
+}
+
 .header-actions {
   display: flex;
   gap: 12px;

@@ -83,15 +83,15 @@ footer {
 }
 
 .header-website {
+  display: block !important;
   color: #000 !important;
   background: transparent !important;
   font-size: 7.5pt;
   margin-bottom: 0;
 }
 
-.header-website a {
+.header-website span {
   color: #000 !important;
-  text-decoration: none !important;
 }
 
 .header-right {
