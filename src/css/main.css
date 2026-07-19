@@ -910,14 +910,16 @@ footer {
     margin-bottom: 10px;
   }
 
-  #experience {
-    break-before: page;
-  }
-
   #education {
     break-inside: avoid;
     page-break-inside: avoid;
     break-before: auto;
+  }
+
+  #education h2,
+  .content-section h2 {
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   .job-left h3 {
@@ -988,6 +990,8 @@ footer {
     padding: 12px;
     break-inside: avoid;
     page-break-inside: avoid;
+    break-before: avoid;
+    page-break-before: avoid;
   }
 
   .edu-header h3 {
