@@ -1,0 +1,370 @@
+/* ==========================================================================
+   Kenny Serpa Resume — Print Stylesheet
+   Purpose: Clean, compact styles for PDF generation and browser printing.
+   This file is loaded with media="print" so it never affects the screen UI.
+   ========================================================================== */
+
+@page {
+  margin: 0.35in 0.45in;
+  size: letter;
+}
+
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 9pt !important;
+}
+
+body {
+  background: #fff !important;
+  color: #000 !important;
+  font-size: 9pt !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Hide chrome that does not belong on a resume */
+.site-header,
+.skip-link,
+.header-actions,
+footer {
+  display: none !important;
+}
+
+.page {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+.resume-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #999;
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+  break-inside: avoid;
+}
+
+.resume-header h1 {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 16pt;
+  line-height: 1.1;
+  margin-bottom: 1px;
+}
+
+.header-tagline {
+  color: #0a3d8f !important;
+  background: transparent !important;
+  font-size: 8.5pt;
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+
+.header-summary {
+  color: #000 !important;
+  background: transparent !important;
+  max-width: none;
+  margin-bottom: 1px;
+  font-size: 8pt;
+  line-height: 1.25;
+}
+
+.header-website {
+  display: block !important;
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 7.5pt;
+  margin-bottom: 0;
+}
+
+.header-website span {
+  color: #000 !important;
+}
+
+.header-right {
+  padding-top: 0;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.recruiter-glance {
+  color: #000 !important;
+  background: transparent !important;
+  gap: 1px;
+  font-size: 7.5pt;
+}
+
+.recruiter-role {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 10pt;
+  font-weight: 900;
+}
+
+.recruiter-tenure,
+.recruiter-tenure span {
+  color: #000 !important;
+  background: transparent !important;
+}
+
+.recruiter-focus,
+.recruiter-location {
+  color: #000 !important;
+  background: transparent !important;
+}
+
+.recruiter-strength {
+  background: #cfe4ff !important;
+  color: #08306b !important;
+  border: 1px solid #5fa3ff !important;
+  font-size: 7pt;
+  font-weight: 700;
+  padding: 1px 4px;
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+.content-section,
+.two-col {
+  margin-bottom: 6px;
+}
+
+.content-section h2 {
+  color: #000 !important;
+  background: transparent !important;
+  border-bottom: 1px solid #888;
+  font-size: 8pt;
+  font-weight: 700;
+  margin-bottom: 4px;
+  padding-bottom: 1px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* --------------------------------------------------------------------------
+   Career Highlights — render as a compact list in print
+   -------------------------------------------------------------------------- */
+.highlights-grid {
+  display: block !important;
+  column-count: 2;
+  column-gap: 16px;
+  margin-bottom: 4px;
+}
+
+.highlight-card {
+  display: block !important;
+  position: relative !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-left: 2px solid #08306b !important;
+  padding: 1px 0 2px 6px !important;
+  margin-bottom: 3px;
+  break-inside: avoid;
+}
+
+.highlight-card .hc-inner {
+  display: block !important;
+  position: static !important;
+  transform: none !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.highlight-card .hc-front {
+  display: none !important;
+}
+
+.highlight-card .hc-back {
+  display: inline !important;
+  position: static !important;
+  transform: none !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+  color: #000 !important;
+  font-size: 8pt;
+  line-height: 1.2;
+}
+
+.highlight-card .hc-back::before {
+  content: attr(data-title) '. ';
+  color: #000 !important;
+  font-weight: 700;
+}
+
+.hc-teaser,
+.hc-hint {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Experience
+   -------------------------------------------------------------------------- */
+.job {
+  break-inside: avoid;
+  margin-bottom: 5px;
+}
+
+.job-header {
+  margin-bottom: 1px;
+}
+
+.job-left h3 {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 9pt;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.job-company,
+.job-date,
+.job-note {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 8pt;
+}
+
+.job ul {
+  margin-top: 1px;
+  padding-left: 12px;
+}
+
+.job ul li {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 8pt;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+.job ul li::before {
+  color: #08306b;
+}
+
+/* --------------------------------------------------------------------------
+   Skills + Certifications
+   -------------------------------------------------------------------------- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  break-inside: avoid;
+}
+
+.skill-block {
+  margin-bottom: 2px;
+}
+
+.skill-cat {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 7.5pt;
+  font-weight: 700;
+  display: block;
+}
+
+.skill-vals {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 8pt;
+}
+
+.cert-list {
+  gap: 1px;
+}
+
+.cert-item {
+  padding-bottom: 1px;
+}
+
+.cert-name {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 8pt;
+}
+
+.cert-date {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 7pt;
+}
+
+/* --------------------------------------------------------------------------
+   Education
+   -------------------------------------------------------------------------- */
+#education {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  break-before: auto;
+}
+
+.edu-item {
+  background: transparent !important;
+  border: none !important;
+  border-left: 2px solid #08306b !important;
+  padding: 2px 0 2px 6px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  break-before: avoid;
+  page-break-before: avoid;
+}
+
+.edu-header {
+  margin-bottom: 1px;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.edu-header h3 {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 9pt;
+  margin-bottom: 0;
+}
+
+.edu-org {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 8pt;
+  white-space: nowrap;
+}
+
+.edu-detail {
+  color: #000 !important;
+  background: transparent !important;
+  font-size: 8pt;
+  line-height: 1.2;
+  margin: 0;
+}
