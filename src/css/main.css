@@ -927,7 +927,7 @@ footer {
   }
 
   .hc-num::after {
-    content: ". ";
+    content: '. ';
   }
 
   .hc-back {
