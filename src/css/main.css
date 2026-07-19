@@ -914,6 +914,12 @@ footer {
     break-before: page;
   }
 
+  #education {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    break-before: auto;
+  }
+
   .job-left h3 {
     font-size: 10.5pt;
   }
@@ -980,6 +986,8 @@ footer {
     background: #fff;
     border: 1px solid #ddd;
     padding: 12px;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .edu-header h3 {
