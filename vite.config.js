@@ -1,30 +1,36 @@
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
 
 /**
  * Vite configuration for a GitHub Pages user site.
- * User sites are served from the repository root, so base is '/'.
- * If this ever becomes a project site under a subpath, update `base` accordingly.
+ * User sites are served from the repository root; base './' keeps asset
+ * paths relative so the build works on both Pages and local preview.
  *
- * Environment variables prefixed with VITE_ are exposed to the client bundle.
- * VITE_API_URL lets contributors point the frontend at a local backend for
- * end-to-end testing without editing source code.
+ * The site is fully static — no runtime API URL is injected.
  */
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '');
-
-  return {
-    root: 'src',
-    base: './',
-    publicDir: '../public',
-    define: {
-      __API_URL__: JSON.stringify(env.VITE_API_URL || 'https://api.kserpa.com'),
-    },
-    build: {
-      outDir: '../dist',
-      assetsDir: 'assets',
-      emptyOutDir: true,
-      minify: true,
-      sourcemap: true,
-    },
-  };
+export default defineConfig({
+  root: 'src',
+  base: './',
+  publicDir: '../public',
+  // Friendly for VS Code Remote SSH: listen on all interfaces so port
+  // forwarding and "Open in Browser" can reach the process reliably.
+  server: {
+    host: true, // 0.0.0.0 + ::
+    port: 5173,
+    strictPort: true,
+    // Do not try to open a browser on the server (no display over SSH).
+    open: false,
+  },
+  preview: {
+    host: true,
+    port: 4173,
+    strictPort: true,
+    open: false,
+  },
+  build: {
+    outDir: '../dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+    minify: true,
+    sourcemap: true,
+  },
 });

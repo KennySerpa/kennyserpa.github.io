@@ -31,8 +31,8 @@ jobs:
       - name: Lint and validate
         run: npm run validate
 
-      - name: Build
-        run: npm run build
+      - name: Build site, generate PDF, smoke-check
+        run: npm run build:full
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4

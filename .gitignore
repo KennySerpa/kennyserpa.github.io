@@ -36,5 +36,8 @@ Thumbs.db
 *.tmp
 .cache/
 
+# Local GUI verification artifacts (screenshots)
+artifacts/
+
 # Local backups
 *.bak

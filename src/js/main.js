@@ -4,24 +4,16 @@
  * Responsibilities:
  *   - Mobile navigation toggle
  *   - Scroll-spy active state for in-page links
- *   - Dynamic tenure counter
- *   - Flip-card highlights and analytics tracking
- *   - PDF download
+ *   - Flip-card highlights (client-only)
+ *   - PDF download (static asset, no remote API)
+ *
+ * Tenure is a static calendar claim in HTML ("Experience since Aug 2023")
+ * so the site and PDF stay accurate without a live Date.now() counter.
  */
 
 const MOBILE_BREAKPOINT_PX = 700;
 const SCROLL_OFFSET_PX = 100;
-
-const API_URL = typeof __API_URL__ !== 'undefined' ? __API_URL__ : 'https://api.kserpa.com';
-const FALLBACK_PDF_URL = './resume.pdf';
-const SESSION_KEY = 'ks_session_id';
-
-/**
- * Track whether the analytics backend is reachable.
- * Starts as `null` (unknown) and is updated after the first request.
- * @type {boolean|null}
- */
-let backendAvailable = null;
+const STATIC_PDF_URL = './resume.pdf';
 
 const toggle = document.querySelector('.nav-toggle');
 const menu = document.querySelector('.nav-links');
@@ -98,95 +90,13 @@ function initScrollSpy() {
 }
 
 /**
- * Calculate and display tenure since the start date.
- */
-function initTenureCounter() {
-  const startDate = new Date('2023-08-26');
-  const now = new Date();
-
-  let years = now.getFullYear() - startDate.getFullYear();
-  let months = now.getMonth() - startDate.getMonth();
-  const dayDiff = now.getDate() - startDate.getDate();
-
-  if (dayDiff < 0) {
-    months -= 1;
-  }
-  if (months < 0) {
-    years -= 1;
-    months += 12;
-  }
-
-  const yearPart = years > 0 ? `${years} year${years === 1 ? '' : 's'}` : '';
-  const monthPart = months > 0 ? `${months} month${months === 1 ? '' : 's'}` : '';
-  const tenure = [yearPart, monthPart].filter(Boolean).join(', ');
-
-  const counter = document.getElementById('tenure-counter');
-  if (counter) {
-    counter.textContent = tenure;
-  }
-}
-
-/**
- * Generate a UUID-like session identifier.
- * @returns {string}
- */
-function generateSessionId() {
-  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
-    return crypto.randomUUID();
-  }
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
-    const r = (Math.random() * 16) | 0;
-    return (c === 'x' ? r : (r & 0x3) | 0x8).toString(16);
-  });
-}
-
-/**
- * Get the existing session id or create a new one.
- * @returns {string}
- */
-function getOrCreateSessionId() {
-  let id = localStorage.getItem(SESSION_KEY);
-  if (!id) {
-    id = generateSessionId();
-    localStorage.setItem(SESSION_KEY, id);
-  }
-  return id;
-}
-
-/**
- * Send an analytics event to the backend.
- * Failures are swallowed silently so the UI never breaks when the backend is down.
- *
- * @param {string} eventType
- * @param {string|null} cardId
- */
-async function trackEvent(eventType, cardId = null) {
-  try {
-    const response = await fetch(`${API_URL}/api/track`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sessionId: getOrCreateSessionId(),
-        eventType,
-        cardId,
-      }),
-    });
-    backendAvailable = response.ok;
-  } catch {
-    backendAvailable = false;
-    // Silently ignore analytics failures; tracking must not affect the site.
-  }
-}
-
-/**
- * Initialize the career highlight flip cards.
+ * Initialize the career highlight flip cards (no network calls).
  */
 function initFlipCards() {
   const cards = document.querySelectorAll('.highlight-card');
   cards.forEach(card => {
     const flip = () => {
       card.classList.toggle('flipped');
-      trackEvent('card_flip', card.dataset.cardId);
     };
 
     card.addEventListener('click', flip);
@@ -200,32 +110,11 @@ function initFlipCards() {
 }
 
 /**
- * Check whether the backend PDF endpoint is reachable.
- * Uses a lightweight HEAD request to avoid triggering a full PDF render.
- *
- * @returns {Promise<boolean>}
+ * Open the static resume PDF shipped with the site.
+ * No remote API — works on any network that can load GitHub Pages.
  */
-async function isBackendPdfAvailable() {
-  try {
-    const response = await fetch(`${API_URL}/api/resume.pdf`, { method: 'HEAD', mode: 'cors' });
-    return response.ok;
-  } catch {
-    return false;
-  }
-}
-
-/**
- * Open the resume PDF.
- * Prefers the backend-generated PDF for analytics, but falls back to a static
- * local PDF if the backend is unreachable so the site keeps working.
- */
-async function downloadResumePdf() {
-  trackEvent('pdf_download');
-
-  const useBackend = backendAvailable ?? (await isBackendPdfAvailable());
-  const pdfUrl = useBackend ? `${API_URL}/api/resume.pdf` : FALLBACK_PDF_URL;
-
-  window.open(pdfUrl, '_blank');
+function downloadResumePdf() {
+  window.open(STATIC_PDF_URL, '_blank', 'noopener,noreferrer');
 }
 
 /**
@@ -248,10 +137,8 @@ function init() {
 
   initMobileNav();
   initScrollSpy();
-  initTenureCounter();
   initFlipCards();
   initActionButtons();
-  trackEvent('page_view');
 }
 
 if (document.readyState === 'loading') {

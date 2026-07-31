@@ -6,18 +6,26 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:remote": "vite --host 0.0.0.0 --port 5173 --strictPort",
     "build": "vite build",
     "preview": "vite preview",
+    "preview:remote": "vite preview --host 0.0.0.0 --port 4173 --strictPort",
+    "pdf": "node scripts/generate-pdf.mjs",
+    "smoke": "node scripts/smoke-check.mjs",
+    "gui": "node scripts/gui-verify.mjs",
+    "build:full": "npm run build && npm run pdf && npm run smoke",
+    "verify": "npm run build:full && npm run gui",
     "lint": "npm run lint:css && npm run lint:html",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint:html": "html-validate src/**/*.html",
-    "format": "prettier --write \"src/**/*.{html,css,js,json,md}\" \"*.{json,md}\"",
-    "format:check": "prettier --check \"src/**/*.{html,css,js,json,md}\" \"*.{json,md}\"",
+    "format": "prettier --write \"src/**/*.{html,css,js,json,md}\" \"*.{json,md}\" \"scripts/**/*.{js,mjs,md}\"",
+    "format:check": "prettier --check \"src/**/*.{html,css,js,json,md}\" \"*.{json,md}\" \"scripts/**/*.{js,mjs,md}\"",
     "validate": "npm run lint && npm run format:check"
   },
   "devDependencies": {
     "html-validate": "^9.0.0",
     "prettier": "^3.3.3",
+    "puppeteer": "^22.15.0",
     "stylelint": "^16.8.1",
     "stylelint-config-standard": "^36.0.1",
     "vite": "^6.4.3"

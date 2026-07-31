@@ -114,8 +114,7 @@ footer {
   font-weight: 900;
 }
 
-.recruiter-tenure,
-.recruiter-tenure span {
+.recruiter-tenure {
   color: #000 !important;
   background: transparent !important;
 }
