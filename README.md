@@ -36,7 +36,7 @@ npm run preview          # http://localhost:4173
 npm run preview:remote
 ```
 
-Do **not** rely on opening `http://127.0.0.1:5173` *only* on the SSH host —
+Do **not** rely on opening `http://127.0.0.1:5173` _only_ on the SSH host —
 that address is the server’s loopback. VS Code must tunnel it to your laptop.
 
 ## Build, PDF, and validate
